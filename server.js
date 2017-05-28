@@ -46,6 +46,12 @@ app.get('/about',(req, res)=>{
     currentYear: new Date().getFullYear()
   });
 });
+
+app.get('/projects',(req, res)=>{
+  res.render('projects.hbs',{
+    pageTitle: 'Porjects'
+  });
+});
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
